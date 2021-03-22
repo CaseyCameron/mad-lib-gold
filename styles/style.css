@@ -13,7 +13,7 @@ body {
     --color4: hsla(45, 73%, 98%, 1);
     --color5: hsla(224, 40%, 79%, 1); */
 
-    --laurel-green: hsla(74, 18%, 63%, 1);
+    --laurel-green: #aab290;
     --old-rose: hsla(2, 43%, 64%, 1);
     --cyclamen: hsla(335, 99%, 69%, 1);
     --pink-sherbet: hsla(347, 86%, 74%, 1);
@@ -24,7 +24,7 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
+    font-family: cursive;
     background-color: var(--spanish-pink);
 }
 
@@ -35,6 +35,8 @@ main {
     align-items: center;
     margin-bottom: calc(var(--footer-height));
     background-image: url('https://specials-images.forbesimg.com/imageserve/5f5e2ee61350549ea0586841/960x0.jpg?fit=scale');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .mad-lib-container {
@@ -47,11 +49,19 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 1.7rem;
 }
 
 .right {
-    display: none;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    font-family: cursive;
+    font-size: 1.7rem;
+    background:  linear-gradient(rgb(62, 160, 122), rgba(62, 160, 122, 1)); 
+    box-shadow: 10px 10px gold;
+
+}
+
+.text {
+     display: none;
 }
 
 input {
@@ -60,10 +70,13 @@ input {
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: var(--pink-sherbet);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    align-items: center;
+    font-size: 4rem;
+    font-family: cursive;
 }
 
 footer {
@@ -71,12 +84,6 @@ footer {
     justify-content: flex-end;
     background-color: var(--pink-sherbet);
     box-shadow: var(--shadow);
-}
-
-
-h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
 }
 
 .gutter-right {
@@ -129,4 +136,8 @@ footer {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
+  }
+
+  button {
+      margin: 25px;
   }

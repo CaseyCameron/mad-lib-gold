@@ -31,5 +31,5 @@ button.addEventListener('click', () => {
     nounFourOutput.textContent = nounFourInput.value;
     adjectiveTwoOutput.textContent = adjectiveTwoInput.value;
     nounFiveOutput.textContent = nounOneInput.value;
-    hideStuff.classList.toggle('right');
+    hideStuff.classList.toggle('text');
 });
