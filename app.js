@@ -19,6 +19,8 @@ const nounFiveOutput = document.getElementById('noun-5-output');
 
 const button = document.getElementById('button');
 
+const hideStuff = document.getElementById('hide');
+
 button.addEventListener('click', () => {
     nounOneOutput.textContent = nounOneInput.value;
     nounTwoOutput.textContent = nounTwoInput.value;
@@ -29,4 +31,5 @@ button.addEventListener('click', () => {
     nounFourOutput.textContent = nounFourInput.value;
     adjectiveTwoOutput.textContent = adjectiveTwoInput.value;
     nounFiveOutput.textContent = nounOneInput.value;
+    hideStuff.classList.toggle('right');
 });
