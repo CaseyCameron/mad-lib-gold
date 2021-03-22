@@ -18,6 +18,15 @@ const adjectiveTwoOutput = document.getElementById('adjective-2-output');
 const nounFiveOutput = document.getElementById('noun-5-output');
 
 const button = document.getElementById('button');
+const radioButtonOne = document.getElementById('radio-button-1');
+const radioButtonTwo = document.getElementById('radio-button-2');
+
+
+//if this button is clicked, turn on input rules set one
+radioButtonOne.addEventListener('click', () => {
+    console.log('It\'s checked'); 
+});
+
 
 const hideStuff = document.getElementById('hide');
 
