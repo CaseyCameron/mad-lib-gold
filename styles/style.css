@@ -63,6 +63,10 @@ main {
      display: none;
 }
 
+.text2 {
+    display: none;
+}
+
 input {
     border-radius: 15px;
 }

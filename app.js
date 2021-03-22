@@ -21,14 +21,41 @@ const button = document.getElementById('button');
 const radioButtonOne = document.getElementById('radio-button-1');
 const radioButtonTwo = document.getElementById('radio-button-2');
 
+const inputOne = document.getElementById('input1');
+const inputTwo = document.getElementById('input2');
+const inputThree = document.getElementById('input3');
+const inputFour = document.getElementById('input4');
+const inputFive = document.getElementById('input5');
+const inputSix = document.getElementById('input6');
+const inputSeven = document.getElementById('input7');
+const inputEight = document.getElementById('input8');
 
 //if this button is clicked, turn on input rules set one
 radioButtonOne.addEventListener('click', () => {
-    console.log('It\'s checked'); 
+    inputOne.textContent = 'Noun: ';
+    inputTwo.textContent = 'Noun: ';
+    inputThree.textContent = 'Adjective: ';
+    inputFour.textContent = 'Noun: ';
+    inputFive.textContent = 'Adverb: ';
+    inputSix.textContent = 'Verb: ';
+    inputSeven.textContent = 'Noun: ';
+    inputEight.textContent = 'Adjective: ';
+});
+
+radioButtonTwo.addEventListener('click', () => {
+    inputOne.textContent = 'Noun: ';
+    inputTwo.textContent = 'Noun: ';
+    inputThree.textContent = 'Adjective: ';
+    inputFour.textContent = 'Noun: ';
+    inputFive.textContent = 'Adverb: ';
+    inputSix.textContent = 'Verb: ';
+    inputSeven.textContent = 'Noun: ';
+    inputEight.textContent = 'Adjective: ';
 });
 
 
-const hideStuff = document.getElementById('hide');
+const hideStuff1 = document.getElementById('hide');
+const hideStuff2 = document.getElementById('hide2');
 
 button.addEventListener('click', () => {
     nounOneOutput.textContent = nounOneInput.value;
@@ -40,5 +67,14 @@ button.addEventListener('click', () => {
     nounFourOutput.textContent = nounFourInput.value;
     adjectiveTwoOutput.textContent = adjectiveTwoInput.value;
     nounFiveOutput.textContent = nounOneInput.value;
-    hideStuff.classList.toggle('text');
+    if (document.getElementById('radio-button-1').value === 'ON'){
+        hideStuff1.classList.toggle('text');
+        console.log('test');
+    } else if (document.getElementById('radio-button-2').value === 'ON'){
+        hideStuff2.classList.toggle('text2');
+        console.log('test');
+    }
 });
+
+    // if madlib1 is toggled, then toggle text
+    // else if madlib 2 is toggled, toggle text2
