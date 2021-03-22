@@ -12,6 +12,12 @@ body {
     --color3: hsla(315, 37%, 86%, 1);
     --color4: hsla(45, 73%, 98%, 1);
     --color5: hsla(224, 40%, 79%, 1); */
+
+    --laurel-green: hsla(74, 18%, 63%, 1);
+    --old-rose: hsla(2, 43%, 64%, 1);
+    --cyclamen: hsla(335, 99%, 69%, 1);
+    --pink-sherbet: hsla(347, 86%, 74%, 1);
+    --spanish-pink: hsla(2, 67%, 82%, 1);
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
@@ -19,7 +25,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: var(--spanish-pink);
 }
 
 main {
@@ -28,17 +34,34 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    background-image: url('https://specials-images.forbesimg.com/imageserve/5f5e2ee61350549ea0586841/960x0.jpg?fit=scale');
 }
 
 .mad-lib-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right {
+    display: none;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+input {
+    border-radius: 15px;
 }
 
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: var(--pink-sherbet);
     height: var(--header-height);
     box-shadow: var(--shadow);
 }
@@ -46,7 +69,7 @@ header {
 footer {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: var(--pink-sherbet);
     box-shadow: var(--shadow);
 }
 
