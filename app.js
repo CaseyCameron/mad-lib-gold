@@ -17,6 +17,16 @@ const nounFourOutput = document.getElementById('noun-4-output');
 const adjectiveTwoOutput = document.getElementById('adjective-2-output');
 const nounFiveOutput = document.getElementById('noun-5-output');
 
+const nounOneOutputA = document.getElementById('noun-1-output-a');
+const nounTwoOutputA = document.getElementById('noun-2-output-a');
+const adjectiveOneOutputA = document.getElementById('adjective-1-output-a');
+const nounThreeOutputA = document.getElementById('noun-3-output-a');
+const adverbOneOutputA = document.getElementById('adverb-1-output-a');
+const verbOneOutputA = document.getElementById('verb-1-output-a');
+const nounFourOutputA = document.getElementById('noun-4-output-a');
+const adjectiveTwoOutputA = document.getElementById('adjective-2-output-a');
+const nounFiveOutputA = document.getElementById('noun-5-output-a');
+
 const button = document.getElementById('button');
 const radioButtonOne = document.getElementById('radio-button-1');
 const radioButtonTwo = document.getElementById('radio-button-2');
@@ -30,7 +40,9 @@ const inputSix = document.getElementById('input6');
 const inputSeven = document.getElementById('input7');
 const inputEight = document.getElementById('input8');
 
-//if this button is clicked, turn on input rules set one
+const test = document.querySelector('.text');
+const hideText = test.style;
+
 radioButtonOne.addEventListener('click', () => {
     inputOne.textContent = 'Noun: ';
     inputTwo.textContent = 'Noun: ';
@@ -45,11 +57,11 @@ radioButtonOne.addEventListener('click', () => {
 radioButtonTwo.addEventListener('click', () => {
     inputOne.textContent = 'Noun: ';
     inputTwo.textContent = 'Noun: ';
-    inputThree.textContent = 'Adjective: ';
-    inputFour.textContent = 'Noun: ';
-    inputFive.textContent = 'Adverb: ';
-    inputSix.textContent = 'Verb: ';
-    inputSeven.textContent = 'Noun: ';
+    inputThree.textContent = 'Verb: ';
+    inputFour.textContent = 'Adjective: ';
+    inputFive.textContent = 'Verb: ';
+    inputSix.textContent = 'Comparative Adjective: ';
+    inputSeven.textContent = 'Adverb: ';
     inputEight.textContent = 'Adjective: ';
 });
 
@@ -58,23 +70,29 @@ const hideStuff1 = document.getElementById('hide');
 const hideStuff2 = document.getElementById('hide2');
 
 button.addEventListener('click', () => {
-    nounOneOutput.textContent = nounOneInput.value;
-    nounTwoOutput.textContent = nounTwoInput.value;
-    adjectiveOneOutput.textContent = adjectiveOneInput.value;
-    nounThreeOutput.textContent = nounThreeInput.value;
-    adverbOneOutput.textContent = adverbOneInput.value;
-    verbOneOutput.textContent = verbOneInput.value;
-    nounFourOutput.textContent = nounFourInput.value;
-    adjectiveTwoOutput.textContent = adjectiveTwoInput.value;
-    nounFiveOutput.textContent = nounOneInput.value;
-    if (document.getElementById('radio-button-1').value === 'ON'){
-        hideStuff1.classList.toggle('text');
-        console.log('test');
-    } else if (document.getElementById('radio-button-2').value === 'ON'){
-        hideStuff2.classList.toggle('text2');
-        console.log('test');
+    if (document.getElementById('radio-button-1').checked){
+        hideStuff1.style.display = 'block';
+        hideStuff2.style.display = 'none';
+        nounOneOutput.textContent = nounOneInput.value;
+        nounTwoOutput.textContent = nounTwoInput.value;
+        adjectiveOneOutput.textContent = adjectiveOneInput.value;
+        nounThreeOutput.textContent = nounThreeInput.value;
+        adverbOneOutput.textContent = adverbOneInput.value;
+        verbOneOutput.textContent = verbOneInput.value;
+        nounFourOutput.textContent = nounFourInput.value;
+        adjectiveTwoOutput.textContent = adjectiveTwoInput.value;
+        nounFiveOutput.textContent = nounOneInput.value;
+    } else if (document.getElementById('radio-button-2').checked){
+        hideStuff2.style.display = 'block';
+        hideStuff1.style.display = 'none';
+        nounOneOutputA.textContent = nounOneInput.value;
+        nounTwoOutputA.textContent = nounTwoInput.value;
+        adjectiveOneOutputA.textContent = adjectiveOneInput.value;
+        nounThreeOutputA.textContent = nounThreeInput.value;
+        adverbOneOutputA.textContent = adverbOneInput.value;
+        verbOneOutputA.textContent = verbOneInput.value;
+        nounFourOutputA.textContent = nounFourInput.value;
+        adjectiveTwoOutputA.textContent = adjectiveTwoInput.value;
+        nounFiveOutputA.textContent = nounOneInput.value;
     }
 });
-
-    // if madlib1 is toggled, then toggle text
-    // else if madlib 2 is toggled, toggle text2
