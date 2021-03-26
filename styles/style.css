@@ -52,6 +52,14 @@ main {
     font-size: 1.7rem;
 }
 
+#input-hide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: fit-content;
+    font-size: 1.7rem;
+}
+
 .right {
     font-family: cursive;
     font-size: 1.7rem;
@@ -72,7 +80,7 @@ input {
 }
 
 header {
-    display: flex;
+    display: grid;
     justify-content: center;
     background-color: var(--pink-sherbet);
     height: var(--header-height);
