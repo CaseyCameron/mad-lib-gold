@@ -12,11 +12,14 @@ const hideInputs = document.getElementById('input-hide');
 radioButtonOne.addEventListener('click', () => {
     radioButtonFunction('Noun', 'Noun', 'Adjective', 'Noun', 'Adverb', 'Verb', 'Noun', 'Adjective');
     hideInputs.style.display = 'flex';
+    hideMadLib2.style.display = 'none';
 });
 
 radioButtonTwo.addEventListener('click', () => {
     radioButtonFunction('Noun', 'Noun', 'Verb', 'Adjective', 'Verb', 'Comparitive Adjective', 'Adverb', 'Adjective');
     hideInputs.style.display = 'flex';
+    hideMadLib1.style.display = 'none';
+    hideMadLib2.style.display = 'none';
 });
 
 button.addEventListener('click', () => {
