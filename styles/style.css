@@ -1,18 +1,5 @@
 
 body {
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
-
     --laurel-green: #aab290;
     --old-rose: hsla(2, 43%, 64%, 1);
     --cyclamen: hsla(335, 99%, 69%, 1);
@@ -29,20 +16,18 @@ body {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
     background-image: url('https://specials-images.forbesimg.com/imageserve/5f5e2ee61350549ea0586841/960x0.jpg?fit=scale');
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .mad-lib-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     margin: 20px;
     justify-content: space-between;
+    margin-bottom: calc(var(--footer-height));
 }
 
 .left {
@@ -56,11 +41,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-height: fit-content;
-    font-size: 1.7rem;
+    max-width: 40%;
+    font-size: 1.2rem;
 }
 
-.right {
+#right {
+    display: none;
     font-family: cursive;
     font-size: 1.7rem;
     background:  linear-gradient(rgb(62, 160, 122), rgba(62, 160, 122, 1)); 
@@ -68,7 +56,7 @@ main {
 }
 
 .text {
-     display: none;
+    display: none;
 }
 
 .text2 {
@@ -80,7 +68,7 @@ input {
 }
 
 header {
-    display: grid;
+    display: flex;
     justify-content: center;
     background-color: var(--pink-sherbet);
     height: var(--header-height);
@@ -88,47 +76,26 @@ header {
     align-items: center;
     font-size: 4rem;
     font-family: cursive;
+    width: fit-content;
+    block-size: fit-content;
+    contain: content;
 }
 
-footer {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--pink-sherbet);
-    box-shadow: var(--shadow);
+h1 {
+    font-size: 5.5vw;
 }
-
-.gutter-right {
-    margin-right: 20px;
-}
-
-.main-logo {
-    animation: pulse 5s infinite ease-in-out;
-}
-
-header img {
-    height: var(--header-height);
-}
-
-
 
 content {
-    width: 80%;
+    width: 100%;
+    padding: 50px;
 }
 
-p {
-    margin: var(--gutter);
+.radio-button{
+    display: grid;
+    justify-content: left;
+    
 }
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-}
+
   
   @keyframes pulse {
     20% {

@@ -38,12 +38,16 @@
                     <br />
                     <button id="button">Click Here</button>
                 </section>
-                <input type="radio" id="radio-button-1" name="madlib" value="ON">
-                <label for="male">Madlib 1</label><br>
-                <input type="radio" id="radio-button-2" name="madlib" value="other-lib">
-                <label for="male">Madlib  2</label><br>
+                <label for="male" class="radio-button">
+                    Madlib 1
+                    <input type="radio" id="radio-button-1" name="madlib" value="ON" checked />
+                </label><br>
+                <label for="male" class ="radio-button">
+                    Madlib  2
+                    <input type="radio" id="radio-button-2" name="madlib" value="other-lib" />
+                </label><br>
             </section>
-            <section class="right">
+            <section id="right">
                 <section class ="text" id="hide">
                     Thank you for being a <span id="madlib-1-output-1"></span>
                     <br />
@@ -102,9 +106,6 @@
             <source src="https://www.televisiontunes.com/uploads/audio/Golden%20Girls.mp3 ">
         </audio>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
 
     <script type="module" src="app.js"></script>
 </body>

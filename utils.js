@@ -86,3 +86,9 @@ export function showMadLibTwo(hide2, hide1){
     madlibTwoOutput8.textContent = madlibInput8.value;
     madlibTwoOutput9.textContent = madlibInput1.value;
 }
+
+export function hideStuff(inputs, leftSide, rightSide){
+    inputs.style.display = 'flex';
+    leftSide.style.display = 'none';
+    rightSide.style.display = 'none';
+}
