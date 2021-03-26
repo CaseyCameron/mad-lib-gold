@@ -1,4 +1,4 @@
-import { radioButtonFunction, showMadLibOne, showMadLibTwo } from './utils.js';
+import { radioButtonFunction, showMadLibOne, showMadLibTwo, clearInputFields } from './utils.js';
 
 //buttons
 const button = document.getElementById('button');
@@ -26,4 +26,5 @@ button.addEventListener('click', () => {
         showMadLibTwo(hideMadLib2, hideMadLib1);
     }
     hideInputs.style.display = 'none';
+    clearInputFields();
 });
