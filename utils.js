@@ -47,6 +47,18 @@ export function radioButtonFunction(iOne, iTwo, iThree, iFour, iFive, iSix, iSev
     inputEight.textContent = iEight + ':';
 }
 
+export function clearInputFields(){
+    madlibInput1.value = '';
+    madlibInput2.value = '';
+    madlibInput3.value = '';
+    madlibInput4.value = '';
+    madlibInput5.value = '';
+    madlibInput6.value = '';
+    madlibInput7.value = '';
+    madlibInput8.value = '';
+
+}
+
 export function showMadLibOne(hide1, hide2){
     hide1.style.display = 'block';
     hide2.style.display = 'none';
